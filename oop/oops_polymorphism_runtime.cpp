@@ -4,6 +4,10 @@ using namespace std;
 // Parent class
 class Animal {
 public:
+    virtual ~Animal()= default;
+    // we might miss this it's because we want to delete the dog data as well and if class is using virtual we must use this to prevent and memory lekeage or undefined behaviour 
+
+
     virtual void sound() {
         cout << "Animal makes a sound" << endl;
     }
