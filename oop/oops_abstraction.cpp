@@ -5,6 +5,11 @@ class Animal{
     public:
     virtual ~Animal() = default;
     // this class contains the virtual method that's why it needs to have vrtual destructor 
+    void legs() {
+        cout<<"all animal have four legs"<<endl;
+
+
+    }
     
     //it's pure virtual 
     virtual void sound () = 0;
@@ -39,7 +44,7 @@ class Cat : public Animal {
     // we must write a method to override eat as well otherwise the compiler consider Cat as an abstract class and we cannot call abstract class directly 
     void eat() override{
         cout<<"the cat drinks milk"<<endl;
-        
+
     }
 
 };
@@ -52,6 +57,10 @@ int main(){
 
     myAnimal ->sound();
     myAnimal->eat();
+    myAnimal->legs();
+    
+
+
 
     yourAnimal->eat();
     yourAnimal->sound();
