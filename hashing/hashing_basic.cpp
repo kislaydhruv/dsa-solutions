@@ -56,12 +56,15 @@ class Solution{
 
         int maxFreq=0;
         int mostFrequesnt=0;
+        int Second_frequent;
         for(int num : nums){
             freqMap[num]++;
 
             if(freqMap[num]>maxFreq){
+                
                 mostFrequesnt=num;
                 maxFreq=freqMap[num];
+
             }
             else if(freqMap[num]==maxFreq){
                 mostFrequesnt=min(mostFrequesnt,num);

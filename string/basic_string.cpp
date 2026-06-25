@@ -34,6 +34,7 @@ class Solution{
 
     }
 };
+//Here we are missing the case of leading zero 
 class Solution2{
     public:
     string largeOddNum(string& s){
@@ -54,6 +55,7 @@ class Solution2{
     }
 
 };
+
 
 
 int main() {
